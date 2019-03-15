@@ -1,12 +1,12 @@
-const pkg = require('./package')
-const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
+const pkg = require('./package');
+const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin');
 
 module.exports = {
   mode: 'universal',
 
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   head: {
     title: pkg.name,
     meta: [
@@ -20,38 +20,37 @@ module.exports = {
         rel: 'stylesheet',
         href:
           'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Nunito'
       }
     ]
   },
 
   /*
-  ** Customize the progress-bar color
-  */
+   ** Customize the progress-bar color
+   */
   loading: { color: '#fff' },
 
   /*
-  ** Global CSS
-  */
-  css: [
-    '~/assets/style/app.styl'
-  ],
+   ** Global CSS
+   */
+  css: ['~/assets/style/app.styl'],
 
   /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: [
-    '@/plugins/vuetify'
-  ],
+   ** Plugins to load before mounting the App
+   */
+  plugins: ['@/plugins/vuetify'],
 
   /*
-  ** Nuxt.js modules
-  */
-  modules: [
-  ],
+   ** Nuxt.js modules
+   */
+  modules: [],
 
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   build: {
     transpile: ['vuetify/lib'],
     plugins: [new VuetifyLoaderPlugin()],
@@ -61,9 +60,8 @@ module.exports = {
       }
     },
     /*
-    ** You can extend webpack config here
-    */
-    extend(config, ctx) {
-    }
+     ** You can extend webpack config here
+     */
+    extend(config, ctx) {}
   }
-}
+};
